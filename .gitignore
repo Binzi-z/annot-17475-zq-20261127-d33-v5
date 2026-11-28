@@ -11,3 +11,8 @@ __pycache__/
 artifacts/
 recordings/
 *.mp4
+
+# 构建与基准产物（大体积，可由命令重新生成）
+/bin/
+/out/
+/tmp/

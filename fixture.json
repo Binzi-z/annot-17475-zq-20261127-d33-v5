@@ -1,20 +1,123 @@
 {
-  "synthetic": true,
-  "events": [
-    {
-      "id": "S01",
-      "organization": "training",
-      "kind": "measurement_bank"
-    },
-    {
-      "id": "S02",
-      "organization": "training",
-      "kind": "reset_semantics"
-    },
-    {
-      "id": "S03",
-      "organization": "training",
-      "kind": "digest_chain"
+    "synthetic": true,
+    "ledgers": [
+      {
+        "device_id": "GOLDEN",
+        "boots": [
+          {
+            "device_id": "GOLDEN",
+            "boot_number": 1,
+            "generation": 1,
+            "algorithm": "SHA256",
+            "active_mask": "0x3f",
+            "records": [
+              {
+                "seq": 1,
+                "op": "extend",
+                "mask": "0x01",
+                "digest": "8f51a70a9a540ab6a3dd27b2705913bca92d14a83a8d6c6282c2d7f0bb78a8d8"
+              },
+              {
+                "seq": 3,
+                "op": "extend",
+                "mask": "0x10",
+                "digest": "e5ec56acad8b18f92fe97831204177d88c0835362fa33cf8d232799509713a23"
+              }
+            ],
+            "seal": {
+              "device_id": "GOLDEN",
+              "boot_number": 1,
+              "generation": 1,
+              "algorithm": "SHA256",
+              "active_mask": "0x3f",
+              "empty_banks": null,
+              "prev_seal": "",
+              "seal_value": "",
+              "sealed": false
+            }
+          },
+          {
+            "device_id": "GOLDEN",
+            "boot_number": 2,
+            "generation": 1,
+            "algorithm": "SHA256",
+            "active_mask": "0x3f",
+            "empty_banks": [
+              1
+            ],
+            "records": [
+              {
+                "seq": 1,
+                "op": "extend",
+                "mask": "0x01",
+                "digest": "2176e17671e3b674cc3e86be564894c643fea0a337d7c214ea5e085eda484432"
+              },
+              {
+                "seq": 2,
+                "op": "extend",
+                "mask": "0x10",
+                "digest": "cb0c07a6ff668dd7bd82feb8c0811059e9256ece5d9dcac8b8fc54152d4cf2ca"
+              }
+            ],
+            "seal": {
+              "device_id": "GOLDEN",
+              "boot_number": 2,
+              "generation": 1,
+              "algorithm": "SHA256",
+              "active_mask": "0x3f",
+              "empty_banks": null,
+              "prev_seal": "",
+              "seal_value": "e30a998ea2af3426c444445cb01dd8db8eec47f5595ed2a8a5e0e01195433d6d",
+              "sealed": true
+            }
+          },
+          {
+            "device_id": "GOLDEN",
+            "boot_number": 3,
+            "generation": 1,
+            "algorithm": "SHA256",
+            "active_mask": "0x3f",
+            "records": [
+              {
+                "seq": 1,
+                "op": "extend",
+                "mask": "0x01",
+                "digest": "c5949f21e63d09cb2f0640182350149077fab9d18d64e8e595532cdb91d18543"
+              },
+              {
+                "seq": 2,
+                "op": "reset",
+                "mask": "0x03"
+              }
+            ],
+            "seal": {
+              "device_id": "GOLDEN",
+              "boot_number": 3,
+              "generation": 1,
+              "algorithm": "SHA256",
+              "active_mask": "0x3f",
+              "empty_banks": null,
+              "prev_seal": "e30a998ea2af3426c444445cb01dd8db8eec47f5595ed2a8a5e0e01195433d6d",
+              "seal_value": "c3fbd4adcc6e04868108791fdf1c2dc32979c4eebe1d4064d3b622ef697dcc4b",
+              "sealed": true
+            }
+          }
+        ]
+      }
+    ],
+    "arrivals": {
+      "GOLDEN": [
+        {
+          "record": {
+            "seq": 2,
+            "op": "extend",
+            "mask": "0x04",
+            "digest": "e0883f8bb86194732ef099f4a4a6247162167a190da190b655a8e382930022ab"
+          },
+          "ref_boot": 1,
+          "generation": 1,
+          "physical_seq": 0
+        }
+      ]
     }
-  ]
-}
+  }

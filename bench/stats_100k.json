@@ -1,0 +1,51 @@
+{
+  "target_records": 100000,
+  "actual_records": 100000,
+  "devices": 8,
+  "total_boots": 16482,
+  "equivalence_checks": 8,
+  "equivalence_failures": 0,
+  "cache": {
+    "cold_misses": 8,
+    "warm_hits": 8,
+    "mutated_misses": 8,
+    "reused_boots_on_warm_hit": 16482,
+    "checkpoints_stored": 8
+  },
+  "backfill": {
+    "backfilled_boots": 385,
+    "backfilled_records": 385,
+    "distinct_generations": 190,
+    "late_rejected": 741
+  },
+  "boot_status_counts": {
+    "CONFLICTED": 2965,
+    "OK": 11977,
+    "UNPROVABLE": 786,
+    "UNSEALED": 754
+  },
+  "conflict_rule_counts": {
+    "BOOT_NUMBER_REPEATED": 363,
+    "CROSS_GENERATION_REF": 372,
+    "EVIDENCE_MISMATCH": 374,
+    "FIRMWARE_RESET_REJECTED": 363,
+    "GENERATION_REGRESSION": 371,
+    "LATE_AFTER_SEALED": 369,
+    "SEAL_MISMATCH": 375,
+    "SEQ_DUPLICATE": 378
+  },
+  "truth_mismatches": 0,
+  "small_model": {
+    "interleave_permutations": 90,
+    "distinct_final_states": 1,
+    "converged": true,
+    "reset_first_ok": true,
+    "crash_conflict_ok": true
+  },
+  "dual_writer": {
+    "banks_written_seal_missing": "OK 标记 UNSEALED（无法证实签封，非前后冲突）",
+    "late_after_recovery": "OK 迟到事件被拒绝",
+    "reset_first": "OK 物理交错合流"
+  },
+  "elapsed_ms": 66590
+}
